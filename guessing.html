@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="style.css">
+
+	<script type="text/javascript">
+
+		function checkAnswers(){
+			var answer = parseInt(Math.random() * 100);
+
+			while(true){
+
+				var number = prompt("Для выхода нажмите q");
+
+				if(number == "q")
+					break;
+
+				number = parseInt(number);
+
+				if(number == answer){
+					alert("Молодец! Вы угадали!");
+					break;
+				} else if(number < answer){
+					alert("Ваше число слишком маленькое");
+				} else if(number > answer){
+					alert("Ваше число слишком большое");
+				}
+
+			}
+		}
+
+	</script>
+
+</head>
+<body>
+ 
+ 	<div id="header">
+		<a href="index.html">Главная</a><span>/</span>
+		<a href="puzzle.html">Загадки</a><span>/</span>
+		<a href="#">Угадайка</a><span>/</span>
+		<a href="quess-2.html">Угадайка мультиплеер</a><span>/</span>
+	</div>
+	<div id="content">
+		<h1>Угадайка</h1>
+
+			<div id="box">
+				<h2>Игра для одного игрока. Нужно угадать число, загаданное компьютером</h2>
+
+				<p>Введите ваш вариант ответа</p>
+				<input type="text"></input>
+
+				<br/>
+
+				<a href="#" onClick="checkAnswers();">Ответить</a>
+
+			</div>
+		</div>
+	</div>
+
+	<div id="footer">
+		Copyright &#169 2016 <a href="https://geekbrains.ru/"> GeegBrains </a>
+	</div>	
+</body>
+</html>
